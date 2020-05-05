@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/code.css' %}">
+  <link rel="stylesheet" type="text/css" href="styles.css?version=51">
+  <link rel="stylesheet" href="{% static 'css/masonry.css' %}">
+  <link rel="stylesheet" href="{% static 'css/hamburguer.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="{% static 'js/scroll.js' %}"></script>
+  <title>Code.</title>
+</head>
+{% include 'body.html' with form=form%}
+<body>
+  <section id="code_intro">
+    <div class="code_title">
+      <h1>HOW IT WORKS</h1>
+      <h3>CODE</h3>
+    </div>
+
+
+    <div class="code_legend">
+      <img id="logo" src="{% static 'img/code_logo.png' %}">
+      <img id="legend" src="{% static 'img/legend.jpg' %}">
+    </div>
+
+
+  </section>
+
+
+
+  <section id="code_video">
+    <div class="container_video">
+      <video width="50%" autoplay controls muted>
+        <source src="{% static 'img/code_video.mp4' %}" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+
+</body>
+{% include 'footer.html' %}
+
+</html>

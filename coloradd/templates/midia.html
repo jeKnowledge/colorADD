@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/midia.css' %}">
+  <link rel="stylesheet" href="{% static 'css/masonry.css' %}">
+  <link rel="stylesheet" type="text/css" href="styles.css?version=51">
+  <link rel="stylesheet" href="{% static 'css/hamburguer.css' %}">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="{% static 'js/scroll.js' %}"></script>
+  <title>Midia</title>
+</head>
+{% include 'body.html' with form=form%}
+<body>
+  <section id="midia_header">
+    <div class="midia_title">
+      <h1>STAY TUNED</h1>
+      <h3>MIDIA</h3>
+    </div>
+    <div class="header_img">
+      <div class="header_text">
+        <h2>colorADD</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+      <img src="{% static 'img/midia/header.jpg' %}" width="85%">
+    </div>
+  </section>
+
+
+{% for object in query %}
+  <section id="midia_news">
+    <div class="news_container">
+      <div class="new">
+        <img src="{{ object.imagem.url }}"/>
+        <div class="new_text">
+          <h2>{{object.titulo}}</h2>
+          <p>{{object.texto}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+
+</body>
+
+
+{% include 'footer.html' %}
+
+</html>

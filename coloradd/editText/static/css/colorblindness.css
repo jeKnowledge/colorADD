@@ -1,0 +1,104 @@
+nav a {
+  color: #666363;
+}
+
+* {
+  font-family: Poppins;
+}
+
+/*----------------------INTRO------------------------*/
+#cb-header {
+  height: auto;
+}
+.cb-title {
+  padding: 10% 0 0 10%;
+}
+
+.cb-title h1 {
+  position: absolute;
+  font-family: Open Sans;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 95px;
+  margin-top: -30px;
+  color: rgba(0, 0, 0, 0.06);
+}
+
+.cb-title h3::after {
+  display: block;
+  content: '';
+  width: 8%;
+  height: 4px;
+  background: #FFCF26;
+  margin-top: 4px;
+}
+
+.cb-title h3 {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 87px;
+}
+.cb-image{
+  margin:2% 10%;
+}
+.cb-image img{
+  width: 100%;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 700px) {
+
+  .cb-title h1 {
+    font-size: 32px;
+    margin-top: -15px;
+  }
+
+  .cb-title h3 {
+    font-size: 20px;
+  }
+  .cb-title h3::after {
+    margin-top: -25px;
+  }
+}
+
+/*----------------------QUESTS------------------------*/
+#quests {
+  height: auto;
+  padding-bottom: 10%;
+}
+#quests h2{
+  font-size: 3em;
+  color: #FFCF26;
+}
+#quests p, ul{
+  margin-top: 2%;
+}
+.quest{
+  background-color: #ffffff;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+  padding: 5%;
+  border-radius: 25px;
+}
+.quest1{
+  margin: 10% 10% 0 10%;
+}
+.effect{
+  margin: 5% 10%;
+}
+.impacts{
+  margin: 5% 10%;
+}
+.impacts li{
+  list-style-position: inside;
+}
+.impacts p{
+  margin-top: 2%;
+}
+@media screen and (max-width: 700px) {
+  #quests h2{
+    font-size: 1.2em;
+  }
+  #quests p , li{
+    font-size: 0.8em;
+  }
+}

@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/solutions.css' %}">
+  <link rel="stylesheet" href="{% static 'css/labs.css' %}">
+  <link rel="stylesheet" href="{% static 'css/masonry.css' %}">
+  <link rel="stylesheet" type="text/css" href="styles.css?version=51">
+  <link rel="stylesheet" href="{% static 'css/hamburguer.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="{% static 'js/scroll.js' %}"></script>
+  <title>Solutions.</title>
+</head>
+{% include 'body.html' with form=form%}
+<body>
+  <section id="solutions_intro">
+    <div class="intro_title">
+      <h1>SOLUTIONS</h1>
+      <div class="sol_options">
+        <a href="#clothing">
+          <h3>CLOTHING</h3>
+        </a>
+        <a href="#environment">
+          <h3>ENVIRONMENT</h3>
+        </a>
+        <a href="#games">
+          <h3>GAMES</h3>
+        </a>
+        <a href="#health">
+          <h3>HEALTH</h3>
+        </a>
+        <a href="#transports">
+          <h3>TRANSPORTS</h3>
+        </a>
+        <a href="#supplies">
+          <h3>SUPPLIES</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="clothing">
+    <div class="solutions_title">
+      <h1>SOLUTIONS</h1>
+      <h3>CLOTHING</h3>
+      <p>Discover partnerships and examples in the textile industry where ColorADD code is implemented.</p>
+    </div>
+    <div class="clothing_gallery">
+      <div class="masonry">
+        <div class="brick">
+
+          <div class="controls">
+            <a href="#"><img src="{% static 'img/react-01.png' %}" width="90%"></a>
+            <a href="#"><img src="{% static 'img/react-03.png' %}" width="90%"></a>
+            <a href="#"><img src="{% static 'img/react-02.png' %}" width="90%"></a>
+          </div>
+        </div>
+        {% for object in query %}
+          <div class="brick">
+            <img src="{{ object.picture.url }}" >
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="environment">
+    <div class="solutions_title">
+      <h1>SOLUTIONS</h1>
+      <h3>ENVIRONMENT</h3>
+      <p>In Portugal, ColorADD code is implemented in many cities. Check the examples:</p>
+    </div>
+    <div class="environment_gallery">
+      <div class="masonry">
+        {% for objects in query2 %}
+          <div class="brick">
+            <img src="{{ objects.picture.url }}">
+          </div>
+        {% endfor %}
+      </div>
+  </section>
+
+  <section id="games">
+    <div class="solutions_title">
+      <h1>SOLUTIONS</h1>
+      <h3>GAMES</h3>
+      <p>Because color is for all, the code was implemented in games where color is a determining factor. One of the most popular card game (UNO) and football tickets are only a few examples.</p>
+    </div>
+    <div class="games_gallery">
+      <div class="masonry">
+        {% for objects in query5 %}
+          <div class="brick">
+            <img src="{{ objects.picture.url }}">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="health">
+    <div class="solutions_title">
+      <h1>SOLUTIONS</h1>
+      <h3>HEALTH</h3>
+      <p>From triage to the paths to different parts of the hospital, check the examples where ColorADD code is implemented in the health area.</p>
+    </div>
+    <div class="health_gallery">
+      <div class="masonry">
+        {% for objects in query3 %}
+          <div class="brick">
+            <img src="{{ objects.picture.url }}">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="transports">
+    <div class="solutions_title">
+      <h1>SOLUTIONS</h1>
+      <h3>TRANSPORTS</h3>
+      <p>In many times color is a way to identify the rotes in subways or trains. Check the examples.</p>
+    </div>
+    <div class="transports_gallery">
+      <div class="masonry">
+        {% for objects in query4 %}
+          <div class="brick">
+            <img src="{{ objects.picture.url }}">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="supplies">
+    <div class="solutions_title">
+      <h1>SOLUTIONS</h1>
+      <h3>SUPPLIES</h3>
+      <p>Two examples where ColorADD code is implemented are the coloured pencils and school textbooks where color is a determining factor. Check this and more examples.</p>
+    </div>
+    <div class="transports_gallery">
+      <div class="masonry">
+        {% for objects in query6 %}
+          <div class="brick">
+            <img src="{{ objects.picture.url }}">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</body>
+{% include 'footer.html' %}
+</html>

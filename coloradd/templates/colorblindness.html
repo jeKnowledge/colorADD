@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/colorblindness.css' %}">
+  <link rel="stylesheet" href="{% static 'css/masonry.css' %}">
+  <link rel="stylesheet" type="text/css" href="styles.css?version=51">
+  <link rel="stylesheet" href="{% static 'css/hamburguer.css' %}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="{% static 'js/scroll.js' %}"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="{% static 'js/plugins/debug.addIndicators.min.js' %}"></script>
+  <title>Colorblindness</title>
+</head>
+{% include 'body.html' with form=form%}
+<body>
+  <section id="cb-header">
+    <div class="cb-title">
+      <h1>WHAT IS</h1>
+      <h3>COLORBLINDNESS</h3>
+      <div class="cb-image">
+        <img src="{% static 'img/cblindness.jpg' %}">
+      </div>
+    </div>
+  </section>
+
+  <section id="quests">
+    <div class="quest quest1" data-aos="fade-right">
+      <h2>What is it?</h2>
+      <p>There are different causes of color blindness. For the vast majority of people with deficient color vision the condition is genetic and has been inherited from their mother. Most colorblind people are able to see things as clearly as other people, but they are unable to fully ‘see’ colors. There are different types of colorblindness and there are extremely rare cases where people are unable to see any color at all. </p>
+    </div>
+    <div class="quest effect" data-aos="fade-left">
+      <h2>The effect... </h2>
+      <p>Because most of today’s communication is based on colors, this invisible limitation makes color blinded people with feel excluded from society</p>
+    </div>
+    <div class="quest impacts" data-aos="zoom-in-up">
+      <h2>Colorblindness impacts… </h2>
+      <ul>
+        <li>Approximately <b>5%</b> of world population is colorblind, that means 350 million people;</li>
+        <li><b>90%</b> Of the worldwide communication is based on colors;</li>
+        <li><b>17%</b> Had their colorblindness undetected until the age of 20;</li>
+        <li><b>73%</b> Already felt ashamed for the chosen color;</li>
+        <li><b>90%</b> Ask for help when Buying clothes;</li>
+        <li><b>41%</b> Feels difficulties in Social integration </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+  offset: 200,
+  delay: 50,
+});
+</script>
+</body>
+{% include 'footer.html' %}
+</html>
