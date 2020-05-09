@@ -5,8 +5,9 @@ nav a {
 /*----------------------INTRO------------------------*/
 #midia_header {
   height: auto;
-  padding-bottom: 6%;
+  padding-bottom: 8%;
 }
+
 .midia_title {
   padding-top: 130px;
   padding-left: 80px;
@@ -42,8 +43,11 @@ nav a {
   position: relative;
   width: 100%;
 }
-.header_img img{
+
+.header_img img {
   width: 80%;
+  object-fit: cover;
+  height: 450px;
 }
 
 .header_text {
@@ -52,16 +56,17 @@ nav a {
   bottom: 10%;
   color: #fff;
 }
-.header_text h2{
+
+.header_text h2 {
   font-size: 2em;
 }
-.header_text p{
+
+.header_text p {
   font-weight: lighter;
   font-size: 14px;
 }
 
 @media screen and (max-width: 700px) {
-
   .midia_title {
     padding-top: 80px;
     padding-left: 40px;
@@ -75,61 +80,80 @@ nav a {
   .midia_title h3 {
     font-size: 20px;
   }
+
   .midia_title h3::after {
     margin-top: -25px;
   }
+
   .header_text {
     margin: 2% 30% 0 0;
     color: #000;
     position: relative;
   }
-  .header_text h2{
+
+  .header_text h2 {
     font-size: 1.2em;
   }
-  .header_text p{
+
+  .header_text p {
     margin-top: 2%;
     font-size: 0.8em;
   }
-
+  .header_img img {
+    margin-top: 2%;
+    width: 80%;
+    object-fit: cover;
+    height: 200px;
+  }
 }
 
-
 /*----------------------NEWS------------------------*/
-
 #midia_news {
   height: auto;
-  padding-bottom: 15%;
+  margin: 6% 0;
 }
 
 .news_container {
   margin: 0 10%;
+  position: relative;
 }
-.new{
+
+.new {
   display: flex;
-  padding-top: 80px;
 }
-.new img{
-  width: 40%;
-  height: 40%;
+
+.new img {
+  object-fit: cover;
+  width: 50%;
+  height: 350px;
 }
-.new_text{
-  margin-left: 5%;
+
+.new_text {
+  width: 47%;
+  word-wrap: break-word;
+  margin-left: 3%;
 }
+
 @media screen and (max-width: 700px) {
-  .new{
+  .news_container {
+    margin-top: 2%;
+  }
+
+  .new {
     display: block;
   }
-  .new img{
-    width: 60%;
-    height: 60%;
+
+  .new img {
+    width: 100%;
+    height: 150px;
   }
-  .new_text{
-    margin: 2% 0 0 0;
+
+  .new_text {
+    width: 100%;
+    word-wrap: break-word;
   }
-  .new_text h2{
-    font-size: 1.2em;
-  }
-  .new_text p{
-    font-size: 0.8em;
+
+  .new_text p {
+    font-size: 12px;
   }
 }

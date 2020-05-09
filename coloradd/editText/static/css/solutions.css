@@ -42,7 +42,8 @@ nav a {
 /*----------------------SOLUTIONS------------------------*/
 
 #clothing , #environment , #games , #health , #transports , #supplies{
-  height: 1300px;
+  height: auto;
+  padding-bottom: 40%;
 }
 
 .solutions_title {

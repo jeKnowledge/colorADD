@@ -158,12 +158,11 @@ nav a {
 /*-----------------------INTRO------------------------*/
 #intro {
   height: auto;
-  padding: 3% 0 8% 0;
 }
 
 #intro .intro_container {
   display: flex;
-  margin-top: 10%;
+  margin: 8% 0;
 }
 
 #intro .intro_vid {
@@ -211,10 +210,9 @@ nav a {
 
   #intro .intro_container {
     display: block;
-    margin-top: -7%;
   }
   #intro .intro_vid {
-    margin: 0% 5% 0 5%;
+    margin: -5% 5% 0 5%;
   }
   #intro video {
     width: 90%;
@@ -328,7 +326,7 @@ nav a {
   font-size: 18px;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 900px) {
   .map_text {
     display: none;
   }
@@ -336,6 +334,9 @@ nav a {
 
 @media screen and (max-width: 530px) {
   #map {
+    height: 400px;
+  }
+  #map_img {
     height: 400px;
   }
 }
@@ -499,12 +500,16 @@ nav a {
     margin-left: 66%;
   }
 }
+@media screen and (max-width: 530px) {
+  .accordion {
+    width: 85%;
+    padding-top: 120px;
+  }
+}
 
 /*-----------------------SOLUTIONS------------------------*/
 #solutions {
   height: 600px;
-  padding-left: 18%;
-  width:100%;
 }
 
 #solutions a {

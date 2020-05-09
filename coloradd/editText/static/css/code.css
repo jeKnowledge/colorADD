@@ -36,12 +36,11 @@ nav a {
   line-height: 87px;
 }
 
-#code_legend{
+.code_legend{
   margin-top: 5%;
   display: flex;
   justify-content: center;
 }
-
 #logo {
   width: 40%;
   z-index: 2;

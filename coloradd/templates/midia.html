@@ -16,6 +16,7 @@
   <title>Midia</title>
 </head>
 {% include 'body.html' with form=form%}
+
 <body>
   <section id="midia_header">
     <div class="midia_title">
@@ -33,11 +34,11 @@
   </section>
 
 
-{% for object in query %}
+  {% for object in query %}
   <section id="midia_news">
     <div class="news_container">
       <div class="new">
-        <img src="{{ object.imagem.url }}"/>
+          <img src="{{ object.imagem.url }}" />
         <div class="new_text">
           <h2>{{object.titulo}}</h2>
           <p>{{object.texto}}</p>
@@ -45,7 +46,7 @@
       </div>
     </div>
   </section>
-{% endfor %}
+  {% endfor %}
 
 </body>
 
