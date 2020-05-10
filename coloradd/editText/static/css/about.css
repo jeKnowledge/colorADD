@@ -78,8 +78,7 @@ nav a {
 
 .tabcontent {
   text-align: left;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin: 0% 30%;
   display: none;
   padding: 80px 12px;
   border-top: none;
